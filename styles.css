@@ -30,3 +30,18 @@ h1{
 img{
   border-radius: 50%;
 }
+
+.hero{
+  /*outline over border - border moves everything around in order to surround it,
+  while an outline is sorta overlayed on top of everything*/
+  outline: 1px solid red;
+  /*vh = "viewport height"...100vh sets the top of the border to the bottom
+  of the browser, whatever size it may be (phone, tablet, resized browser, etc)
+  also viewport width*/
+  height: 100vh;
+  /*flexbox. has everything in a row by default, set flex-direction to column
+  to make everything go down the page vertically*/
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
