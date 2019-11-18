@@ -37,10 +37,6 @@ h1 sub:before{
 h1 sub:after{
   content: ")"
 }
-img{
-  border-radius: 50%;
-}
-
 .hero{
   /*outline over border - border moves everything around in order to surround it,
   while an outline is sorta overlayed on top of everything*/
@@ -54,5 +50,32 @@ img{
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+.hero img{
+  width: 100%;
+  height: 100%;
+}
 
+.headshot{
+  width: 500px;
+  height: 300px;
+  border-radius: 50%;
+  /*anything that extends past the given border is hidden*/
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+  /*set timeing of the transform*/
+  transition: transform 1s, box-shadow 1s;
+  background-image: url("resized_edit.jpg");
+  /*contain the background img in the foreground img*/
+  background-size: contain;
+}
+/*adding ':' allows many options for cool things to do, such as a hover event*/
+.headshot:hover{
+  transform: rotate(360deg);
+  box-shadow: 0px 0px 100px 50px #fc0;
+
+}
+.headshot:hover img{
+  opacity: 0;
 }
