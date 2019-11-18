@@ -37,11 +37,18 @@ h1 sub:before{
 h1 sub:after{
   content: ")"
 }
+section{
+  border-top: 2px dashed #eee;
+  /*'padding:##px 0' sets ##px to padding top, left, bottom etc*/
+  padding: 50px 0;
+  max-width: 800px;
+  margin: 0 auto;
+}
 .hero{
   /*outline over border - border moves everything around in order to surround it,
-  while an outline is sorta overlayed on top of everything*/
+  while an outline is sorta overlayed on top of everything
   outline: 1px solid red;
-  /*vh = "viewport height"...100vh sets the top of the border to the bottom
+  vh = "viewport height"...100vh sets the top of the border to the bottom
   of the browser, whatever size it may be (phone, tablet, resized browser, etc)
   also viewport width*/
   height: 100vh;
@@ -50,6 +57,8 @@ h1 sub:after{
   display: flex;
   flex-direction: column;
   justify-content: center;
+  border: 0;
+  padding: 0;
 }
 .hero img{
   width: 100%;
@@ -57,7 +66,7 @@ h1 sub:after{
 }
 
 .headshot{
-  width: 500px;
+  width: 280px;
   height: 300px;
   border-radius: 50%;
   /*anything that extends past the given border is hidden*/
@@ -66,16 +75,10 @@ h1 sub:after{
   margin-right: auto;
   /*set timeing of the transform*/
   transition: transform 1s, box-shadow 1s;
-  background-image: url("resized_edit.jpg");
-  /*contain the background img in the foreground img*/
-  background-size: contain;
 }
 /*adding ':' allows many options for cool things to do, such as a hover event*/
 .headshot:hover{
   transform: rotate(360deg);
   box-shadow: 0px 0px 100px 50px #fc0;
 
-}
-.headshot:hover img{
-  opacity: 0;
 }
