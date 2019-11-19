@@ -56,7 +56,17 @@ section{
   max-width: 800px;
   margin: 0 auto;
 }
-
+section:target h1{
+  animation: flash 1s;
+}
+@keyframes flash{
+  from{
+    text-shadow: 2px 2px 0px #0066ff,
+                  -2px -2px 0px #0066ff;
+  }to{
+    text-shadow: 0px 0px 0px #0066ff;
+  }
+}
 address{
   white-space: pre-line;
   margin-bottom: 20px;
@@ -147,4 +157,26 @@ address{
 }
 .prose li{
   list-style-position: inside;
+}
+
+.nav{
+  width: 100%;
+  display: flex;
+  position: fixed;
+}
+.nav li{
+  list-style-type: none;
+  /*span the whole window*/
+  flex-grow: 1;
+}
+.nav li a{
+  display: block;
+  line-height: 50px;
+  background-color: #0066ff;
+  color:#e6e6e6;
+  text-shadow: 1px 1px 0px #0066ff;
+  transition:background-color .5s;
+}
+.nav li a:hover{
+  background-color: #0052cc;
 }
