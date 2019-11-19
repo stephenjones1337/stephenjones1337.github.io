@@ -37,6 +37,17 @@ h1 sub:before{
 h1 sub:after{
   content: ")"
 }
+h2 {
+  font-size: 24px;
+  line-height: 40px;
+  font-weight: bold;
+}
+a{
+  color:#58b;
+}
+a:hover{
+  color:#369;
+}
 section{
   border-top: 2px dashed #eee;
   /*'padding:##px 0' sets ##px to padding top, left, bottom etc*/
@@ -81,4 +92,13 @@ section{
   transform: rotate(360deg);
   box-shadow: 0px 0px 100px 50px #fc0;
 
+}
+
+.list li{
+  display: inline;
+  font-weight: bold;
+}
+
+.list li:not(:last-child):after{
+  content: ", ";
 }
