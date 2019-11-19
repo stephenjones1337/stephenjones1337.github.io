@@ -20,6 +20,10 @@ html, body{
   the text, but it looks nice to me*/
   text-shadow: 1px 1px 0px #fff;
 }
+i{
+  font-style: italic;
+}
+
 body {
   text-align: center;
   overflow-x: hidden;
