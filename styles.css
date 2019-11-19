@@ -17,8 +17,8 @@ html, body{
   line-height: 30px;
   color:#444;
   /*add slight shadow to background, really only visable when you highlight
-  the text, but it looks nice to me*/
-  text-shadow: 1px 1px 0px #fff;
+  the text, but it looks nice to me*
+  text-shadow: 1px 1px 0px #fff;*/
 }
 i{
   font-style: italic;
@@ -32,6 +32,7 @@ h1{
   font-size: 36px;
   line-height: 50px;
   font-weight: bold;
+  text-shadow: 1px 1px 1px #fff;
   z-index: 9998;
 }
 h1 sub{
@@ -82,6 +83,7 @@ address{
   /*outline over border - border moves everything around in order to surround it,
   while an outline is sorta overlayed on top of everything
   outline: 1px solid red;
+
   vh = "viewport height"...100vh sets the top of the border to the bottom
   of the browser, whatever size it may be (phone, tablet, resized browser, etc)
   also viewport width*/
@@ -114,8 +116,7 @@ address{
 }
 /*adding ':' allows many options for cool things to do, such as a hover event*/
 .headshot:hover{
-  transform: rotate(360deg);
-  box-shadow: 0px 0px 100px 50px #fc0;
+  box-shadow: 0px 0px 100px 50px #0052cc;
 
 }
 
