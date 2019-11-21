@@ -1,4 +1,5 @@
-/*remove default styles*/
+/*ATRIBUTES*/
+/*remove default styles, '*' applies to all atributes*/
 *{
   margin:0;
   padding:0;
@@ -17,8 +18,7 @@ html, body{
   line-height: 30px;
   color:#444;
   /*add slight shadow to background, really only visable when you highlight
-  the text, but it looks nice to me*
-  text-shadow: 1px 1px 0px #fff;*/
+  the text, but it looks nice to me**/
 }
 i{
   font-style: italic;
@@ -33,12 +33,10 @@ h1{
   line-height: 50px;
   font-weight: bold;
   text-shadow: 1px 1px 1px #fff;
-  z-index: 9998;
 }
 h1 sub{
   color: #aaa;
   vertical-align: baseline;
-  z-index: 9998;
 }
 h1 sub:before{
   content: "("
@@ -50,6 +48,9 @@ h2 {
   font-size: 24px;
   line-height: 40px;
   font-weight: bold;
+}
+p{
+  margin-bottom: 10px;
 }
 a{
   color:#58b;
@@ -69,16 +70,18 @@ section:target h1{
 }
 @keyframes flash{
   from{
-    text-shadow: 2px 2px 0px #0066ff,
-                  -2px -2px 0px #0066ff;
+    text-shadow: 1px 1px 0px #3771a1,
+                  -1px -1px 0px #3771a1;
   }to{
-    text-shadow: 0px 0px 0px #0066ff;
+    text-shadow: 0px 0px 0px #3771a1;
   }
 }
 address{
   white-space: pre-line;
   margin-bottom: 20px;
 }
+/*END ATRIBUTES*/
+/*CLASSES*/
 .hero{
   /*outline over border - border moves everything around in order to surround it,
   while an outline is sorta overlayed on top of everything
@@ -117,18 +120,20 @@ address{
 /*adding ':' allows many options for cool things to do, such as a hover event*/
 .headshot:hover{
   box-shadow: 0px 0px 100px 50px #0052cc;
-
+}
+.postheader p{
+  margin-bottom: 0;
+  margin
 }
 
 .list li{
   display: inline;
   font-weight: bold;
-
 }
-
 .list li:not(:last-child):after{
   content: ", ";
 }
+/* PROJECTS */
 .blocklist > li{
   display: flex;
   justify-content: center;
@@ -163,6 +168,8 @@ address{
     margin: 50px 0;
   }
 }
+/* END PROJECTS */
+/* BIO */
 .prose{
   text-align: justify;
   max-width: 500px;
@@ -173,9 +180,10 @@ address{
   margin: 20px auto;
 }
 .prose li{
-  list-style-position: inside;
+  list-style-position:inside;
 }
-
+/* END BIO */
+/* NAV BAR */
 .nav{
   width: 100%;
   display: flex;
@@ -191,11 +199,14 @@ address{
 .nav li a{
   display: block;
   line-height: 50px;
-  background-color: #0066ff;
+  background-color: #3771a1;
   color:#e6e6e6;
-  text-shadow: 1px 1px 0px #0066ff;
+  text-shadow: 1px 1px 0px #3771a1;
   transition:background-color .5s;
 }
 .nav li a:hover{
-  background-color: #0052cc;
+  background-color: #4b5a82;
 }
+/*END NAV BAR*/
+
+/*END CLASSES*/
