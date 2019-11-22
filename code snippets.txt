@@ -1,0 +1,19 @@
+p{
+  margin-bottom: 10px;
+}
+
+.prose{
+  text-align: justify;
+  max-width: 500px;
+  margin: 0 auto;
+}
+.prose p
+.prose ul{
+  margin: 20px auto;
+}
+.prose li {
+  list-style-position:inside;
+}
+.pastskills li{
+  margin-left: 20px;
+}

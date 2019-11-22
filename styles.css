@@ -183,6 +183,9 @@ address{
 .prose li{
   list-style-position:inside;
 }
+.pastskills li{
+  margin-left: 20px;
+}
 /* END BIO */
 /* NAV BAR */
 .nav{
