@@ -203,7 +203,7 @@ address{
 .nav li{
   list-style-type: none;
   /*span the whole window*/
-  width: 25%;
+  flex-grow: 1;
 }
 .nav li a{
   display: block;
@@ -220,21 +220,19 @@ address{
 
 }
 /*you COULD force it by making a class for each list item, and hide all but the selected one on hover*/
-.nav:not() li a{
-  display: none;
-}
+
 @keyframes grow {
  from{
-
+ width: auto;
  }to{
-
+  width:100vw;
  }
 }
 @keyframes shrink {
  from{
-
+ width:100vw;
  }to{
-
+width: auto;
  }
 }
 /*END NAV BAR*/
