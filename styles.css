@@ -1,6 +1,10 @@
 /*ATRIBUTES*/
 /*remove default styles, '*' applies to all atributes*/
 /*testing a change*/
+/*NAV incopmplete*/
+
+/*add iframe of gif from imgur or something that opens on click from projects*/
+/*or learn how to make the pop up window on hover/click*/
 *{
   margin:0;
   padding:0;
@@ -180,33 +184,59 @@ address{
 .prose ul{
   margin: 20px auto;
 }
-.prose li{
+.prose li {
   list-style-position:inside;
+}
+.pastskills li{
+  margin-left: 20px;
 }
 /* END BIO */
 /* NAV BAR */
 .nav{
+  background-color: #3771a1;
   width: 100%;
   display: flex;
   position: fixed;
+  overflow: hidden;
   /*z index has max val of 10,000 and min val of -10,000. positive front*/
   z-index: 9999;
 }
 .nav li{
   list-style-type: none;
   /*span the whole window*/
-  flex-grow: 1;
+  width: 25%;
 }
 .nav li a{
   display: block;
+  text-align: center;
   line-height: 50px;
-  background-color: #3771a1;
   color:#e6e6e6;
   text-shadow: 1px 1px 0px #3771a1;
   transition:background-color .5s;
 }
 .nav li a:hover{
   background-color: #4b5a82;
+  width: 100vw;
+  animation: grow 1s;
+
+}
+/*you COULD force it by making a class for each list item, and hide all but the selected one on hover*/
+.nav:not() li a{
+  display: none;
+}
+@keyframes grow {
+ from{
+
+ }to{
+
+ }
+}
+@keyframes shrink {
+ from{
+
+ }to{
+
+ }
 }
 /*END NAV BAR*/
 
