@@ -193,47 +193,53 @@ address{
 /* END BIO */
 /* NAV BAR */
 .nav{
-  background-color: #3771a1;
   width: 100%;
   display: flex;
   position: fixed;
-  overflow: hidden;
+  background-color: #3771a1;
   /*z index has max val of 10,000 and min val of -10,000. positive front*/
   z-index: 9999;
 }
-.nav li{
+.nav li {
   list-style-type: none;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
   /*span the whole window*/
-  flex-grow: 1;
+}
+.nav li a:last-child{
+  float: right;
 }
 .nav li a{
   display: block;
-  text-align: center;
-  line-height: 50px;
+  padding: 14px 16px;
+  background-color: #3771a1;
   color:#e6e6e6;
   text-shadow: 1px 1px 0px #3771a1;
   transition:background-color .5s;
 }
 .nav li a:hover{
   background-color: #4b5a82;
-  width: 100vw;
   animation: grow 1s;
-
+  padding: 14px 64px;
+}
+.nav li a:not(hover){
+  animation:shrink 1s;
 }
 /*you COULD force it by making a class for each list item, and hide all but the selected one on hover*/
 
 @keyframes grow {
  from{
- width: auto;
+   padding: 14px 16px;
  }to{
-  width:100vw;
+  padding: 14px 64px;
  }
 }
 @keyframes shrink {
  from{
- width:100vw;
+   padding: 14px 64px;
  }to{
-width: auto;
+   padding: 14px 16px;
  }
 }
 /*END NAV BAR*/
